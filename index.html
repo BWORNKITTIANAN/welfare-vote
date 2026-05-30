@@ -33,7 +33,7 @@ body{font-family:Sarabun,-apple-system,sans-serif;background:#f7f7f5;color:#1a1a
 .tk{position:absolute;top:8px;right:8px;width:20px;height:20px;border-radius:50%;background:#1D9E75;display:none;align-items:center;justify-content:center;font-size:16px;color:#fff;font-weight:700}
 .cc.sel .tk{display:flex}
 .av{width:54px;height:54px;border-radius:50%;margin:0 auto 8px;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
-.no{font-size:10px;color:#888}.nm{font-size:12px;font-weight:700;margin:2px 0;line-height:1.3}.dp{font-size:10px;color:#888}
+.no{font-size:10px;color:#888}.nm{font-size:12px;font-weight:700;margin:2px 0;line-height:1.3}.dp{font-size:10px;color:#888;margin-bottom:6px}.info-btn{font-size:10px;color:#0F6E56;border:1px solid #5DCAA5;border-radius:20px;background:transparent;padding:3px 8px;cursor:pointer;font-family:inherit;margin-top:4px}
 .con{background:#fff;border:1px solid #e5e5e5;border-radius:12px;padding:20px;max-width:520px;margin:0 auto}
 .cl{list-style:none;margin:12px 0}.cl li{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #e5e5e5;font-size:13px}.cl li:last-child{border-bottom:none}
 .nb{width:22px;height:22px;border-radius:50%;background:#f7f7f5;border:1px solid #e5e5e5;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0}
@@ -119,7 +119,59 @@ body{font-family:Sarabun,-apple-system,sans-serif;background:#f7f7f5;color:#1a1a
 
 <script>
 var API = "https://script.google.com/macros/s/AKfycbwUwyXR5tytIy3uAKZT81oekm96LPTxRyMY9PUXvggE_OP7Hm-HWSadK4iCDbVs3mxd_Q/exec";
-var CANDS = [{"id": 1, "name": "รัตน์ กำลังว่อง", "dept": "Maintenance Department", "init": "Rat"}, {"id": 2, "name": "กฤษดา คณากร", "dept": "Quality Assurance Department", "init": "Bas"}, {"id": 3, "name": "วีระพงษ์ ทาทองหลาง", "dept": "Maintenance Department", "init": "Golf"}, {"id": 4, "name": "ไพศาล นิลหล้า", "dept": "Material Control Department", "init": "Nut"}, {"id": 5, "name": "ยศพล เพชรศรี", "dept": "Production Department 1", "init": "Ex"}, {"id": 6, "name": "อดิชาต สร้างประโคน", "dept": "Production Department 2", "init": "Yok"}, {"id": 7, "name": "ดนุสรณ์ พิลาบุตร", "dept": "Production Department 1", "init": "Yos"}, {"id": 8, "name": "รชฎ ทิมินกุล", "dept": "Production Department 2", "init": "Pao"}, {"id": 9, "name": "เศกสรรค์ ห้าวเส้ง", "dept": "Production Department 1", "init": "Pom"}, {"id": 10, "name": "สุรศักดิ์ ไชยพร", "dept": "Production Department 1", "init": "Nong"}, {"id": 11, "name": "ทศวรรษ มุลิกา", "dept": "Production Department 1", "init": "Golf"}, {"id": 12, "name": "พงษ์ศักดิ์ ทารส", "dept": "Production Department 2", "init": "Pong"}, {"id": 13, "name": "ทศพร โพธ์สาวัง", "dept": "Production Department 1", "init": "Tom"}];
+var CANDS = [{"id": 1, "name": "รัตน์ กำลังว่อง", "dept": "Maintenance Department", "init": "Rat", "bio": "ผู้สมัครหมายเลข 1
+พร้อมเป็นตัวแทนในการผลักดันการพิจารณาโบนัส เบี้ยขยัน และแนวทางสร้างความมั่นคงในการจ้างงาน เพื่อประโยชน์ของพนักงานทุกคน
+
+繁中：
+願意代表員工推動年終獎金、全勤獎金及工作穩定相關建議，為全體員工爭取更好的福利。"}, {"id": 2, "name": "กฤษดา คณากร", "dept": "Quality  Assurance Department", "init": "Bas", "bio": "ผู้สมัครหมายเลข 2
+พร้อมเป็นตัวแทนในการผลักดันการพิจารณาโบนัส การปรับเงินเดือน กองทุนสำรองเลี้ยงชีพ และสวัสดิการที่ช่วยสร้างความมั่นคงในอนาคต
+
+繁中：
+願意代表員工推動獎金、調薪、退休儲蓄基金及相關福利，提升員工未來保障。"}, {"id": 3, "name": "วีระพงษ์ ทาทองหลาง", "dept": "Maintenance Department", "init": "Golf", "bio": "ผู้สมัครหมายเลข 3
+พร้อมเป็นตัวแทนในการรับฟัง ปกป้องสิทธิ และผลักดันการแก้ไขปัญหาที่ส่งผลต่อพนักงานอย่างเป็นธรรม
+
+繁中：
+願意傾聽員工聲音，維護員工權益，並推動合理改善員工所面臨的問題。"}, {"id": 4, "name": "ไพศาล นิลหล้า", "dept": "Material Control  Department", "init": "Nut", "bio": "ผู้สมัครหมายเลข 4
+พร้อมเป็นตัวแทนในการผลักดันเบี้ยขยัน โบนัส และการพัฒนาสภาพแวดล้อมการทำงานให้ร่มรื่นและน่าอยู่ยิ่งขึ้น
+
+繁中：
+願意推動全勤獎金、年終獎金及工作環境改善，打造更舒適的工作場所。"}, {"id": 5, "name": "ยศพล เพชรศรี", "dept": "Production Department 1", "init": "Ex", "bio": "ผู้สมัครหมายเลข 5
+พร้อมเป็นตัวแทนในการผลักดันโบนัส การปรับเงินประจำปี และสวัสดิการที่ช่วยสร้างขวัญกำลังใจให้พนักงาน
+
+繁中：
+願意推動年終獎金、年度調薪及員工福利改善，提升工作士氣。"}, {"id": 6, "name": "อติชาต สร้างประโคน", "dept": "Production Department 2", "init": "Yok", "bio": "ผู้สมัครหมายเลข 6
+พร้อมเป็นตัวแทนในการผลักดันการพิจารณาเบี้ยขยัน เพื่อสร้างแรงจูงใจและกำลังใจในการทำงาน
+
+繁中：
+願意推動全勤獎金制度，鼓勵員工並提升工作動力。"}, {"id": 7, "name": "ดนุสรณ์ พิลาบุตร", "dept": "Production Department 1", "init": "Yos", "bio": "ผู้สมัครหมายเลข 7
+พร้อมเป็นตัวแทนในการผลักดันสวัสดิการวันเกิด พื้นที่พักผ่อนที่เหมาะสม และอำนวยความสะดวกในชีวิตประจำวันของพนักงาน
+
+繁中：
+願意推動生日福利、休息空間改善及提升員工日常便利性。"}, {"id": 8, "name": "รชฏ ทิมินกุล", "dept": "Production Department 2", "init": "Pao", "bio": "ผู้สมัครหมายเลข 8
+พร้อมเป็นตัวแทนในการผลักดันการพิจารณาโบนัสประจำปี และพัฒนาสวัสดิการที่ตอบโจทย์ความต้องการของพนักงาน
+
+繁中：
+願意推動年終獎金及員工福利改善，回應員工需求。"}, {"id": 9, "name": "เศกสรรค์ ห้าวเส็ง", "dept": "Production Department 1", "init": "Pom", "bio": "ผู้สมัครหมายเลข 9
+พร้อมเป็นตัวแทนในการผลักดันโบนัสประจำปี และแนวทางที่ช่วยสร้างความมั่นคงในการทำงานให้พนักงาน
+
+繁中：
+願意推動年終獎金及提升員工工作穩定性的相關措施。"}, {"id": 10, "name": "สุรศักดิ์ ไชยพร", "dept": "Production Department 1", "init": "Nong", "bio": "ผู้สมัครหมายเลข 10
+พร้อมเป็นอีกหนึ่งเสียงของพนักงาน รับฟังทุกความคิดเห็น และผลักดันการพัฒนาสวัสดิการเพื่อคุณภาพชีวิตที่ดีขึ้น
+
+繁中：
+願意成為員工的一份聲音，傾聽意見並推動福利改善，提升生活品質。"}, {"id": 11, "name": "ทศวรรษ มุลิกา", "dept": "Production Department 1", "init": "Golf", "bio": "ผู้สมัครหมายเลข 11
+พร้อมเป็นตัวแทนในการผลักดันสวัสดิการที่เป็นธรรม โปร่งใส และเข้าถึงพนักงานทุกคนอย่างเท่าเทียม
+
+繁中：
+願意推動公平透明的福利制度，讓每位員工都能平等受益。"}, {"id": 12, "name": "พงษ์ศักดิ์ ทารส", "dept": "Production Department 2", "init": "Pong", "bio": "ผู้สมัครหมายเลข 12
+พร้อมเป็นตัวแทนในการผลักดันเบี้ยขยัน โบนัส กิจกรรมพนักงาน กองทุนสำรองเลี้ยงชีพ และสิ่งอำนวยความสะดวกที่เหมาะสม
+
+繁中：
+願意推動全勤獎金、年終獎金、員工活動、退休儲蓄基金及便利設施改善。"}, {"id": 13, "name": "ทศพร โพธิ์สาวัง", "dept": "Production Department 1", "init": "Tom", "bio": "ผู้สมัครหมายเลข 13
+พร้อมเป็นตัวแทนในการผลักดันค่าตอบแทนที่เหมาะสม สวัสดิการที่ช่วยลดภาระค่าใช้จ่าย และคุณภาพชีวิตที่ดีขึ้นของพนักงาน
+
+繁中：
+願意推動合理薪資福利、減輕生活負擔，提升員工生活品質。"}];
 var COLORS = [["#B5D4F4", "#0C447C"], ["#9FE1CB", "#085041"], ["#FAC775", "#633806"], ["#F4C0D1", "#72243E"], ["#CECBF6", "#3C3489"], ["#C0DD97", "#27500A"], ["#F5C4B3", "#712B13"], ["#B5D4F4", "#0C447C"], ["#9FE1CB", "#085041"], ["#FAC775", "#633806"], ["#CECBF6", "#3C3489"], ["#F4C0D1", "#72243E"], ["#C0DD97", "#27500A"]];
 var sel = [];
 var cEmp = "";
@@ -140,7 +192,8 @@ window.onload = function() {
       + '<div class="av" style="background:' + col[0] + ';color:' + col[1] + ';">' + c.init + '</div>'
       + '<p class="no">' + c.id + '</p>'
       + '<p class="nm">' + c.name + '</p>'
-      + '<p class="dp">' + c.dept + '</p>';
+      + '<p class="dp">' + c.dept + '</p>'
+      + '<button class="info-btn" onclick="event.stopPropagation();openModal(' + i + ')">&#128196; นโยบาย</button>';
     gr.appendChild(d);
   }
 };
@@ -295,6 +348,32 @@ function showLoad(m) {
   document.getElementById("ld").classList.add("on");
 }
 function hideLoad() { document.getElementById("ld").classList.remove("on"); }
+
+function openModal(i) {
+  var c = CANDS[i];
+  var col = COLORS[i];
+  var av = document.getElementById("m-av");
+  av.style.background = col[0]; av.style.color = col[1]; av.textContent = c.init;
+  document.getElementById("m-name").textContent = c.name;
+  document.getElementById("m-dept").textContent = c.dept;
+  document.getElementById("m-bio").textContent = c.bio || "-";
+  var bg = document.getElementById("modal-bg");
+  bg.style.display = "flex";
+}
+function closeModal() {
+  document.getElementById("modal-bg").style.display = "none";
+}
 </script>
+
+<div id="modal-bg" onclick="closeModal()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:200;align-items:center;justify-content:center;padding:16px;">
+  <div onclick="event.stopPropagation()" style="background:#fff;border-radius:12px;padding:20px;max-width:340px;width:100%;max-height:80vh;overflow-y:auto;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <div id="m-av" style="width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;flex-shrink:0;"></div>
+      <div><p id="m-name" style="font-size:15px;font-weight:700;"></p><p id="m-dept" style="font-size:11px;color:#888;"></p></div>
+    </div>
+    <p id="m-bio" style="font-size:13px;color:#444;line-height:1.8;white-space:pre-line;"></p>
+    <button onclick="closeModal()" style="width:100%;margin-top:14px;padding:9px;border:1px solid #e5e5e5;border-radius:8px;background:transparent;font-size:13px;cursor:pointer;font-family:inherit;">ปิด</button>
+  </div>
+</div>
 </body>
 </html>
