@@ -127,7 +127,23 @@ var cId3 = "";
 var MAX = 7;
 
 // สร้างการ์ดผู้สมัคร
+
+// ===== เช็ควันปิดโหวต =====
+var CLOSE_DATE = new Date("2026-06-08T20:00:00+07:00");
+
+function checkVotingClosed() {
+  var now = new Date();
+  if (now >= CLOSE_DATE) {
+    document.querySelectorAll(".sc").forEach(function(s) { s.classList.remove("on"); });
+    document.getElementById("s-closed").classList.add("on");
+    document.getElementById("hs").textContent = "ปิดรับการลงคะแนนแล้ว | 投票已截止";
+    return true;
+  }
+  return false;
+}
+
 window.onload = function() {
+  if (checkVotingClosed()) return;
   var gr = document.getElementById("gr");
   for (var i = 0; i < CANDS.length; i++) {
     var c = CANDS[i];
@@ -147,6 +163,7 @@ window.onload = function() {
 };
 
 function doLogin() {
+  if (checkVotingClosed()) return;
   var emp = document.getElementById("e1").value.trim();
   var id3 = document.getElementById("e2").value.trim();
   if (!emp || !id3) { showErr("กรุณากรอกข้อมูลให้ครบ"); return; }
@@ -323,5 +340,23 @@ function closeModal() {
     <button onclick="closeModal()" style="width:100%;margin-top:14px;padding:9px;border:1px solid #e5e5e5;border-radius:8px;background:transparent;font-size:13px;cursor:pointer;font-family:inherit;">ปิด</button>
   </div>
 </div>
+
+<div class="sc" id="s-closed"><div class="wp">
+  <div class="dc" style="border-top:4px solid #dc3545;">
+    <div style="width:64px;height:64px;border-radius:50%;background:#fff0f0;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:30px;">&#128274;</div>
+    <h2 style="font-size:18px;font-weight:700;margin-bottom:8px;color:#dc3545;">ปิดรับการลงคะแนนแล้ว</h2>
+    <p style="font-size:15px;font-weight:600;color:#dc3545;margin-bottom:12px;">投票已截止</p>
+    <p style="font-size:13px;color:#888;line-height:1.8;margin-bottom:16px;">
+      หมดเขตรับการลงคะแนน วันที่ 8 มิถุนายน 2569 เวลา 20:00 น.<br>
+      截止日期：2026年6月8日 20:00
+    </p>
+    <div style="background:#f7f7f5;border-radius:8px;padding:14px;text-align:left;">
+      <p style="font-size:13px;color:#555;padding:3px 0;">&#128203; ประกาศผลวันที่ 9 มิถุนายน 2569</p>
+      <p style="font-size:13px;color:#555;padding:3px 0;">&#128205; บอร์ดประชาสัมพันธ์หน้าโรงอาหาร</p>
+      <p style="font-size:13px;color:#888;padding:3px 0;">&#20844;&#24067;&#7d50;&#26524;&#26085;&#26399;&#65306;2026&#24180;6&#26376;9&#26085; | &#39310;&#39072;&#21463;&#20253;&#20844;&#21578;&#6b04;</p>
+    </div>
+  </div>
+</div></div>
+
 </body>
 </html>
